@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>AutoFix</title>
+
+  <!-- CSS links using Flask url_for -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- Header section starts -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+              <span>AutoFix</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('about') }}">Claim Estimation</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url_for('service') }}">Heatmap <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('contact') }}">Damage Assessment</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header section ends -->
+  </div>
+
+  <!-- Upload and Heatmap Section -->
+<section class="professional_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <!-- Image Display -->
+      <div class="col-md-6">
+        <div class="img-box">
+          <img id="imagePreview"
+               src="{{ url_for('static', filename=heatmap_img) if heatmap_img else url_for('static', filename='images/professional-img.png') }}"
+               alt="Uploaded Image"
+               style="width: 100%;">
+        </div>
+      </div>
+
+      <!-- Upload Form -->
+      <div class="col-lg-5 col-md-6">
+        <div class="detail-box">
+          <h2>Upload Image</h2>
+          <p>Select an image to upload, and it will appear on the left as a heatmap.</p>
+          <form method="POST" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="social-box">
+      <h4>
+        AutoFix
+      </h4>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- JS Scripts -->
+  <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>AutoFix</title>
+  
+    <!-- CSS links using Flask url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='responsive.css') }}">
+  </head>
+  
+
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                AutoFix
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="{{ url_for('about') }}">claim Estimation </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('service') }}">Heatmap </a>                  
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('contact') }}">Damage Assessment</a>
+                </li>
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="detail-box">
+              <h1>
+                Vehicle    <br>
+                Damage Detection <br>
+                & <br>
+                Claim Estimation
+
+              </h1>
+              <p>
+                An AI-powered platform for accurate vehicle damage assessment, claim estimation, and seamless repair service integration.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/8357614-removebg-preview.png') }}" alt="">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- feature section -->
+  <section class="feature_section">
+    <div class="container">
+      <div class="feature_container">
+        <div class="box">
+          <h5 class="name">
+            Claim estimation with precise accuracy
+          </h5>
+        </div>
+        <div class="box active">
+          
+          <h5 class="name">
+            Heatmap highlights damage impact
+          </h5>
+        </div>
+        <div class="box">
+          
+          <h5 class="name">
+            Damage report with detailed insights
+          </h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end feature section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+            <h2>
+              Damage Detection for Faster Claims
+            </h2>
+            <p>
+              AI-driven claim estimation ensures precise repair cost calculation. It speeds up the process, reducing manual effort and delay
+            </p>
+            <a href="{{ url_for('about') }}">
+              Estimate Claim
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/man-photographing-his-vehicle-with-damages-accident-insurance-with-smart-phone.jpg') }}" alt="">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  <!-- professional section -->
+
+  <section class="professional_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/professional-img.png') }}" alt="">
+
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="detail-box">
+            <h2>
+              Heatmap highlights damage impact 
+              
+            </h2>
+            <p>
+              The interactive heatmap highlights damaged areas with precision, providing clear visual insights. It helps assess the severity of impact for accurate claim evaluation. This enhances transparency and speeds up the inspection process.
+            </p>
+            <a href="{{ url_for('service') }}">
+              Get Heatmap
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end professional section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="detail-box">
+            <h2>
+              Damage report with detailed insights
+            </h2>
+            <p>
+              The automated damage report provides comprehensive insights into the extent of vehicle damage. It includes structured analysis, ensuring accurate claim assessments. This streamlines the process, reducing manual effort and errors.
+            </p>
+            <a href="{{ url_for('contact') }}">
+              Get Report
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/insurance-agent-working-car-accident-claim-process (1).jpg') }}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="social-box">
+      <h4>
+        AutoFix
+      </h4>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery (must come before Bootstrap JS) -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Google Maps API -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+</script>
+
+
+
+</body>
+
+</html>
